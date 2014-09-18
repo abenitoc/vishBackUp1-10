@@ -2,7 +2,7 @@
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <%= render partial: 'help/help_categorize' %>
-    <h3 id="myModalLabel"><i class="icon-th-large"></i><%= t("category.modalLabel")%></h3>
+    <h3 id="myModalLabel"><%= t("category.modalLabel")%></h3>
   </div>
   <div class="modal-body">
     <% generic_categories = Category.authored_by(current_subject).sort_by!{|e| e.title.downcase} %>
